@@ -1,0 +1,18 @@
+Explanation:
+Abstract Pizza Class:
+
+The Pizza class defines the common interface and methods like prepare(), bake(), cut(), and box() that all pizzas will use.
+Concrete Pizza Classes:
+
+NyStyleCheesePizza and ChicagoStyleCheesePizza are specific types of pizzas that extend the Pizza class. Each class defines its unique attributes such as name, dough, and sauce.
+ChicagoStyleCheesePizza overrides the cut() method to cut the pizza into square slices.
+Abstract PizzaStore Class:
+
+The PizzaStore class contains the orderPizza() method, which manages the process of ordering a pizza. It calls the factory method createPizza() to get an instance of a specific pizza type, then prepares, bakes, cuts, and boxes it.
+The createPizza() method is abstract and must be implemented by subclasses.
+Concrete PizzaStore Classes:
+
+NyPizzaStore and ChicagoPizzaStore are concrete implementations of PizzaStore. They implement the createPizza() method to create specific types of pizzas based on the input type.
+Main Class:
+
+The PizzaFactoryMethod class demonstrates how to use the Factory Method pattern. It creates instances of NyPizzaStore and ChicagoPizzaStore, and orders cheese pizzas from each store.

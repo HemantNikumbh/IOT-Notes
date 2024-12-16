@@ -1,0 +1,35 @@
+/* www.electronicsprojects.in Vibration Detector using Arduino, SW420 Vibration Sensor and LED */
+/*To write a program to detects the vibration of an object with sensor using Arduino.*/
+
+#include <Arduino.h>
+#include <stdio.h>
+#define ON 1
+#define OFF 0
+int vibration_Sensor = A4;
+int LED = 4;
+int present_condition = 0;
+int previous_condition = 0;
+void setup() {
+pinMode(vibration_Sensor, INPUT);
+pinMode(LED, OUTPUT);
+}
+void led_blink(void);
+void loop() {
+previous_condition = present_condition;
+present_condition = digitalRead(A5);
+if (previous_condition != present_condition) {
+led_blink();
+} else {
+digitalWrite(LED, OFF);
+}
+}
+void led_blink(void) {
+digitalWrite(LED, ON);
+delay(250);
+digitalWrite(LED, OFF);
+delay(250);
+digitalWrite(LED, ON);
+delay(250);
+digitalWrite(LED, OFF);
+delay(250);
+}

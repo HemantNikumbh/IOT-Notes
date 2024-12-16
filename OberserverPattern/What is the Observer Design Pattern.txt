@@ -1,0 +1,14 @@
+What is the Observer Design Pattern?
+The Observer Design Pattern is a behavioral design pattern that defines a one-to-many dependency between objects so that when one object (the subject) changes state, all its dependents (observers) are notified and updated automatically.
+
+It primarily deals with the interaction and communication between objects, specifically focusing on how objects behave in response to changes in the state of other objects.
+
+The pattern is concerned with defining a mechanism for a group of objects to interact based on changes in the state of one object (the subject). The observers’ behavior is triggered by changes in the subject’s state.
+It encapsulates the behavior of the dependent objects (observers) and allows for a clean separation between the subject and its observers. This separation promotes a more modular and maintainable design.
+The pattern promotes loose coupling between the subject and its observers. The subject doesn’t need to know the concrete classes of its observers, and observers can be added or removed without affecting the subject.
+The primary mechanism in the Observer Pattern is the notification of observers when a change occurs. This notification mechanism facilitates the dynamic and coordinated behavior of multiple objects in response to changes in the subject.
+Real-world analogy of the Observer Design Pattern
+Let us Imagine a scenario where the weather station is observed by various smart devices. The weather station maintains a list of registered devices. When there’s a change in weather conditions, the weather station notifies all devices about the update.
+
+Each device, acts as a concrete observer, interprets and displays the information in its own way.
+The Observer Design Pattern facilitates a flexible and scalable system where adding new devices or weather stations doesn’t disrupt the overall communication, providing real-time and location-specific weather updates to users
